@@ -48,11 +48,11 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
         
         {/* Search bar */}
         <div className="relative mb-4">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white stroke-2" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white stroke-2" />
           <input
             type="text"
             placeholder="Sök..."
-            className="w-full pl-12 pr-4 py-3 bg-[rgba(25,25,25,255)] border-0 text-white placeholder-white text-base focus:outline-none focus:ring-0"
+            className="w-full pl-12 pr-4 py-3 bg-[rgba(25,25,25,255)] border-0 text-white placeholder-white text-sm focus:outline-none focus:ring-0"
           />
         </div>
         
