@@ -26,9 +26,11 @@ export default function Home() {
           {/* Navigation section moved from sidebar */}
           <div className="p-6 pb-0" style={{ fontFamily: 'UnB-Office-Bold, sans-serif' }}>
             <div className="mb-6">
-              <h1 className="text-2xl font-semibold mb-4 text-black">HOODAR</h1>
+              <h1 className="text-2xl font-semibold mb-4 text-black border-b border-gray-300 pb-4">HOODAR</h1>
               <div className="mb-4">
-                <div className="text-sm text-black mb-2 font-bold underline">HEM / KAMPANJER / ALLA HOODAR 100:-</div>
+                <div className="text-sm text-black mb-2 font-bold">
+                  <span className="underline">HEM</span> / <span className="underline">KAMPANJER</span> / <span className="underline">ALLA HOODAR 100:-</span>
+                </div>
                 <div className="flex items-center space-x-2 text-sm text-black">
                   <img src="/img/filter svg.png" alt="Filter" className="w-7 h-7" />
                   <span className="font-bold translate-y-0.5">FILTRERA & SORTERA</span>
