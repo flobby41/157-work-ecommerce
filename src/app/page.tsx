@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Sidebar from '@/components/Sidebar';
 import ProductCard from '@/components/ProductCard';
 import PromoCard from '@/components/PromoCard';
@@ -32,7 +33,7 @@ export default function Home() {
                   <span className="underline">HEM</span> / <span className="underline">KAMPANJER</span> / <span className="underline">ALLA HOODAR 100:-</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-black">
-                  <img src="/img/filter svg.png" alt="Filter" className="w-7 h-7" />
+                  <Image src="/img/filter svg.png" alt="Filter" width={28} height={28} />
                   <span className="font-bold translate-y-0.5">FILTRERA & SORTERA</span>
                 </div>
               </div>

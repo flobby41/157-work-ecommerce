@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { PromoOffer } from '@/types';
 
 interface PromoCardProps {
@@ -10,10 +11,11 @@ export default function PromoCard({ offer }: PromoCardProps) {
     <div className="relative bg-gray-100 overflow-hidden group h-full">
       {/* Background Image */}
       <div className="relative aspect-[16/9] md:aspect-[2/1] overflow-hidden h-full">
-        <img
+        <Image
           src={offer.image}
           alt={offer.title}
-          className=" object-contain group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-contain group-hover:scale-105 transition-transform duration-300"
         />
         
         {/* Overlay Content */}

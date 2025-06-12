@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Heart } from 'lucide-react';
 import { Product } from '@/types';
 
@@ -11,10 +12,11 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
       {/* Product Image */}
       <div className="relative aspect-[3/4] overflow-hidden">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         
         {/* Wishlist button */}

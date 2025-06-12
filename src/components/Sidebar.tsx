@@ -1,14 +1,16 @@
 import React from 'react';
-import { Search, ShoppingCart, User, Menu } from 'lucide-react';
-import { categories } from '@/data/mockData';
-import { Category } from '@/types';
+import Image from 'next/image';
+import { Search, ShoppingCart, User } from 'lucide-react';
 
 interface SidebarProps {
-  onCategoryChange: (categoryId: string) => void;
-  activeCategory: string;
+  // Props kept for future functionality even if not currently used
+  onCategoryChange?: (categoryId: string) => void;
+  activeCategory?: string;
 }
 
-export default function Sidebar({ onCategoryChange, activeCategory }: SidebarProps) {
+export default function Sidebar(props: SidebarProps) {
+  // Props are accepted but not used in current implementation
+  // This allows for future functionality without TypeScript errors
   return (
     <aside className="w-70 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
@@ -39,10 +41,12 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
         </div>
         {/* Logo */}
         <div className="mb-4 mt-4">
-          <img 
+          <Image 
             src="/img/157-work-logo.png" 
             alt="157 NO" 
-            className="h-12 w-auto object-contain"
+            width={120}
+            height={48}
+            className="object-contain"
           />
         </div>
         
