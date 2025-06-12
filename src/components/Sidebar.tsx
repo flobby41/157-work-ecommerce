@@ -33,7 +33,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
             {/* Shopping cart - right */}
             <div className="relative">
               <ShoppingCart className="w-8 h-8" strokeWidth={0.7} />
-              <span className="absolute -bottom-1 -right-1 text-xs bg-black text-white rounded-full min-w-4 h-4 flex items-center justify-center px-1 font-bold">200</span>
+              <span className="absolute -bottom-1 -right-3 text-xs bg-black text-white rounded-full min-w-4 h-4 flex items-center justify-center px-1 font-bold">200</span>
             </div>
           </div>
         </div>
