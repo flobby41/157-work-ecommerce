@@ -7,8 +7,10 @@ interface SidebarProps {
   activeCategory?: string;
 }
 
-export default function Sidebar({ onCategoryChange, activeCategory }: SidebarProps) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function Sidebar({ onCategoryChange: _onCategoryChange, activeCategory: _activeCategory }: SidebarProps) {
   // Component with props for category filtering functionality
+  // Parameters prefixed with _ to indicate they are intentionally unused for now
   return (
     <aside className="w-70 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
