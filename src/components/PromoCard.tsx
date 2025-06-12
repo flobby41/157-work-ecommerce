@@ -33,11 +33,11 @@ export default function PromoCard({ offer }: PromoCardProps) {
           </div>
           
           {/* Bottom content */}
-          <div className="text-white">
-            <h3 className="text-xs font-medium mb-1 tracking-wider">
+          <div className="text-white mb-20 ml-14">
+            <h3 className="text-base font-bold mb-1 tracking-wider">
               {offer.title}
             </h3>
-            <div className="text-3xl md:text-4xl font-bold mb-1">
+            <div className="text-6xl md:text-9xl font-bold mb-1">
               {offer.price}
             </div>
             <p className="text-xs opacity-90">
