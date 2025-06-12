@@ -13,6 +13,32 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
     <aside className="w-64 bg-black text-white min-h-screen">
       {/* Header section integrated into sidebar */}
       <div className="p-4 border-b border-gray-700">
+         {/* Header icons */}
+         <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between w-full text-white">
+            {/* Star icon - left */}
+            <div className="flex items-center space-x-1">
+              <span className="text-base">33</span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            
+            {/* User icon - middle */}
+            <div className="flex items-center space-x-1">
+              <span className="text-base">5F</span>
+              <User className="w-6 h-6" />
+            </div>
+            
+            {/* Shopping cart - right */}
+            <div className="flex items-center space-x-1">
+              <span className="text-base">200</span>
+              <div className="relative">
+                <ShoppingCart className="w-6 h-6" />
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Logo */}
         <div className="text-2xl font-bold tracking-tight text-white mb-4">
           157 WORK
@@ -28,27 +54,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
           />
         </div>
         
-        {/* Header icons */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4 text-white">
-            <div className="flex items-center space-x-1">
-              <span className="text-sm">33</span>
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-sm">5F</span>
-              <User className="w-4 h-4" />
-            </div>
-            <div className="flex items-center space-x-1">
-              <span className="text-sm">200</span>
-              <div className="relative">
-                <ShoppingCart className="w-4 h-4" />
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
       
       {/* Navigation section */}
