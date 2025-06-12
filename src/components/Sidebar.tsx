@@ -3,14 +3,12 @@ import Image from 'next/image';
 import { Search, ShoppingCart, User } from 'lucide-react';
 
 interface SidebarProps {
-  // Props kept for future functionality even if not currently used
   onCategoryChange?: (categoryId: string) => void;
   activeCategory?: string;
 }
 
-export default function Sidebar(props: SidebarProps) {
-  // Props are accepted but not used in current implementation
-  // This allows for future functionality without TypeScript errors
+export default function Sidebar({ onCategoryChange, activeCategory }: SidebarProps) {
+  // Component with props for category filtering functionality
   return (
     <aside className="w-70 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
