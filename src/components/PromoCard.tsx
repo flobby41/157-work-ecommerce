@@ -17,15 +17,15 @@ export default function PromoCard({ offer }: PromoCardProps) {
         />
         
         {/* Overlay Content */}
-        <div className="absolute inset-0 flex flex-col justify-between p-4">
+        <div className="absolute inset-0 flex flex-col justify-between p-4 items-start ml-4 mt-4">
           {/* Top badges */}
           <div className="flex flex-col space-y-1">
             {offer.isLimitedEdition && (
               <>
-                <span className="bg-white text-black px-4 py-2 text-lg font-semibold w-fit">
+                <span className="bg-white text-black px-6 py-2 text-lg font-semibold w-fit">
                   SUPERDEAL
                 </span>
-                <span className="bg-black text-white px-4 py-2 text-lg font-semibold w-fit">
+                <span className="bg-black text-white px-6 py-2 text-lg font-semibold w-fit">
                   LIMITED EDITION
                 </span>
               </>
