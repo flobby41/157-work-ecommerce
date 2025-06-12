@@ -24,16 +24,14 @@ export default function Home() {
         
         <div className="flex-1">
           {/* Navigation section moved from sidebar */}
-          <div className="p-6 pb-0">
+          <div className="p-6 pb-0" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
             <div className="mb-6">
               <h1 className="text-2xl font-semibold mb-4 text-black">HOODAR</h1>
               <div className="mb-4">
-                <div className="text-sm text-gray-600 mb-2">HEM / KAMPANJER / ALLA HOODAR 100:-</div>
+                <div className="text-sm text-gray-600 mb-2 font-bold underline">HEM / KAMPANJER / ALLA HOODAR 100:-</div>
                 <div className="flex items-center space-x-2 text-sm text-black">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                  </svg>
-                  <span>FILTRERA & SORTERA</span>
+                  <img src="/img/filter svg.png" alt="Filter" className="w-4 h-4" />
+                  <span className="font-bold">FILTRERA & SORTERA</span>
                 </div>
               </div>
             </div>
