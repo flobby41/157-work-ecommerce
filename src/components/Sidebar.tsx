@@ -48,7 +48,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
         
         {/* Search bar */}
         <div className="relative mb-4">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white stroke-2" />
+          <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 w-7 h-7 text-white stroke-1" />
           <input
             type="text"
             placeholder="Sök..."
