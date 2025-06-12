@@ -12,7 +12,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
   return (
     <aside className="w-64 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
-      <div className="p-4 border-b border-gray-700">
+      <div className="p-4">
          {/* Header icons */}
          <div className="flex items-center justify-between">
           <div className="flex items-center justify-between w-full text-white">
