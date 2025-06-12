@@ -10,7 +10,7 @@ interface SidebarProps {
 
 export default function Sidebar({ onCategoryChange, activeCategory }: SidebarProps) {
   return (
-    <aside className="w-64 bg-black text-white min-h-screen">
+    <aside className="w-64 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
       <div className="p-4 border-b border-gray-700">
          {/* Header icons */}

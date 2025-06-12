@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'UnB-Office-Regular';
+    src: url('/fonts/unb-office_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
