@@ -34,10 +34,10 @@ export default function PromoCard({ offer }: PromoCardProps) {
           
           {/* Bottom content */}
           <div className="text-white mb-20 ml-14">
-            <h3 className="text-base font-bold mb-1 tracking-widest">
+            <h3 className="text-base font-bold mb-1" style={{ letterSpacing: '0.4em' }}>
               {offer.title}
             </h3>
-            <div className="text-7xl md:text-9xl font-bold mb-1">
+            <div className="font-bold mb-1" style={{ fontSize: '160px' }}>
               {offer.price}
             </div>
             <p 
