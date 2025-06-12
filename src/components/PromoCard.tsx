@@ -7,7 +7,7 @@ interface PromoCardProps {
 
 export default function PromoCard({ offer }: PromoCardProps) {
   return (
-    <div className="relative bg-gray-100 rounded-lg overflow-hidden group h-full">
+    <div className="relative bg-gray-100 overflow-hidden group h-full">
       {/* Background Image */}
       <div className="relative aspect-[16/9] md:aspect-[2/1] overflow-hidden h-full">
         <img
@@ -22,10 +22,10 @@ export default function PromoCard({ offer }: PromoCardProps) {
           <div className="flex flex-col space-y-1">
             {offer.isLimitedEdition && (
               <>
-                <span className="bg-white text-black px-2 py-1 text-xs font-semibold rounded w-fit">
+                <span className="bg-white text-black px-2 py-1 text-xs font-semibold w-fit">
                   SUPERDEAL
                 </span>
-                <span className="bg-black text-white px-2 py-1 text-xs font-semibold rounded w-fit">
+                <span className="bg-black text-white px-2 py-1 text-xs font-semibold w-fit">
                   LIMITED EDITION
                 </span>
               </>
