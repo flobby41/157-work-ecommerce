@@ -7,9 +7,9 @@ interface PromoCardProps {
 
 export default function PromoCard({ offer }: PromoCardProps) {
   return (
-    <div className="relative bg-gray-100 rounded-lg overflow-hidden group">
+    <div className="relative bg-gray-100 rounded-lg overflow-hidden group h-full">
       {/* Background Image */}
-      <div className="relative aspect-[4/5] overflow-hidden">
+      <div className="relative aspect-[3/4] md:aspect-[4/6] overflow-hidden h-full">
         <img
           src={offer.image}
           alt={offer.title}

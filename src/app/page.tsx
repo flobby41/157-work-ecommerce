@@ -40,23 +40,28 @@ export default function Home() {
           <main className="p-6 pt-0">
             {/* Product Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {/* First promotional offer */}
-              <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+              {/* First promotional offer - spans 2 rows */}
+              <div className="col-span-1 sm:col-span-1 lg:col-span-1 row-span-2">
                 <PromoCard offer={promoOffers[0]} />
               </div>
               
               {/* Products */}
-              {filteredProducts.slice(0, 5).map((product) => (
+              {filteredProducts.slice(0, 3).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+              
+              {/* More products to fill the grid */}
+              {filteredProducts.slice(3, 7).map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
               
               {/* Second promotional offer */}
-              <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+              <div className="col-span-1 sm:col-span-1 lg:col-span-1 row-span-2">
                 <PromoCard offer={promoOffers[1]} />
               </div>
               
               {/* More products */}
-              {filteredProducts.slice(5).map((product) => (
+              {filteredProducts.slice(7).map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
