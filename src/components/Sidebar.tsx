@@ -92,51 +92,6 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
           </div>
         </nav>
       </div>
-      
-      {/* Footer sections */}
-      <div className="mt-12 space-y-8">
-        <div>
-          <h3 className="text-sm font-semibold mb-3">OM LAGER 157</h3>
-          <ul className="space-y-2 text-xs text-gray-400">
-            <li>OM OSS</li>
-            <li>NEWS</li>
-            <li>JOBBA HOS OSS</li>
-            <li>CENTRERAT</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 className="text-sm font-semibold mb-3">KUNDTJÄNST</h3>
-          <ul className="space-y-2 text-xs text-gray-400">
-            <li>KONTAKTA OSS</li>
-            <li>KÖPVILLKOR</li>
-            <li>RETUR/ÄNDRING</li>
-            <li>PRESENTKORT</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 className="text-sm font-semibold mb-3">BUTIKER</h3>
-        </div>
-        
-        <div>
-          <h3 className="text-sm font-semibold mb-3">FÖLJ OSS!</h3>
-          <div className="flex space-x-2">
-            <div className="w-6 h-6 bg-blue-600 rounded"></div>
-            <div className="w-6 h-6 bg-pink-600 rounded"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-12 text-center">
-        <p className="text-xs text-gray-400 mb-2">
-          GÅ MED I VÅRT NYHETSBREV<br />
-          SÅ MISSAR DU INGET!
-        </p>
-        <button className="bg-white text-black px-4 py-2 text-xs font-semibold rounded">
-          BLI MEDLEM
-        </button>
-      </div>
     </aside>
   );
 }

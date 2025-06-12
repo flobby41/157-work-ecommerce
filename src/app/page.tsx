@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="text-sm text-black mb-2 font-bold underline">HEM / KAMPANJER / ALLA HOODAR 100:-</div>
                 <div className="flex items-center space-x-2 text-sm text-black">
                   <img src="/img/filter svg.png" alt="Filter" className="w-7 h-7" />
-                  <span className="font-bold">FILTRERA & SORTERA</span>
+                  <span className="font-bold translate-y-0.5">FILTRERA & SORTERA</span>
                 </div>
               </div>
             </div>
