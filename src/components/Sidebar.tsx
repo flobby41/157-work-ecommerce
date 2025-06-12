@@ -63,29 +63,57 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
       <div className="p-4">
         {/* Categories with dropdown arrows */}
         <nav className="space-y-1">
-          <div className="flex items-center justify-between py-2 text-white">
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
             <span className="text-sm font-medium">TJEJ</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
           
-          <div className="flex items-center justify-between py-2 text-white">
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
             <span className="text-sm font-medium">KILLE</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
           
-          <div className="flex items-center justify-between py-2 text-white">
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
             <span className="text-sm font-medium">HI-VIS</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
           
-          <div className="flex items-center justify-between py-2 text-white">
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
             <span className="text-sm font-medium">FÖRENING</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
+            <span className="text-sm font-medium">PROFILERING</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
+            <span className="text-sm font-medium">KAMPANJER</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
+            <span className="text-sm font-medium">KUNDCASE</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white border-b border-gray-700">
+            <span className="text-sm font-medium">PRESENTKORT</span>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
