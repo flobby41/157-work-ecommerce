@@ -52,7 +52,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
           <input
             type="text"
             placeholder="Sök..."
-            className="w-full pl-12 pr-4 py-3 bg-[rgba(25,25,25,255)] border-0 text-white placeholder-white text-sm focus:outline-none focus:ring-0"
+            className="w-full pl-12 pr-4 py-3 bg-[rgba(25,25,25,255)] border-0 text-white placeholder-white text-xs focus:outline-none focus:ring-0"
           />
         </div>
         
