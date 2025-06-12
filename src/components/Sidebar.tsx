@@ -18,7 +18,7 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
           <div className="flex items-center justify-between w-full text-white">
             {/* Star icon - left */}
             <div className="relative">
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="0.7" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
               <span className="absolute -bottom-1 -right-1 text-xs bg-black text-white rounded-full min-w-4 h-4 flex items-center justify-center px-1 font-bold">33</span>
@@ -26,20 +26,24 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
             
             {/* User icon - middle */}
             <div className="relative">
-              <User className="w-10 h-10" strokeWidth={1} />
+              <User className="w-8 h-8" strokeWidth={0.7} />
               <span className="absolute -bottom-1 -right-1 text-xs bg-black text-white rounded-full min-w-4 h-4 flex items-center justify-center px-1 font-bold">JF</span>
             </div>
             
             {/* Shopping cart - right */}
             <div className="relative">
-              <ShoppingCart className="w-10 h-10" strokeWidth={1} />
+              <ShoppingCart className="w-8 h-8" strokeWidth={0.7} />
               <span className="absolute -bottom-1 -right-1 text-xs bg-black text-white rounded-full min-w-4 h-4 flex items-center justify-center px-1 font-bold">200</span>
             </div>
           </div>
         </div>
         {/* Logo */}
-        <div className="text-2xl font-bold tracking-tight text-white mb-4">
-          157 WORK
+        <div className="mb-4 mt-4">
+          <img 
+            src="/img/157-work-logo.png" 
+            alt="157 NO" 
+            className="h-12 w-auto object-contain"
+          />
         </div>
         
         {/* Search bar */}
