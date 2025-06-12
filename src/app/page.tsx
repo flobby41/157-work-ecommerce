@@ -68,7 +68,7 @@ export default function Home() {
             
             {/* Load more button */}
             <div className="mt-12 text-center">
-              <button className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition-colors">
+              <button className="bg-black text-white px-8 py-3 hover:bg-gray-800 transition-colors">
                 VISA FLER
               </button>
             </div>

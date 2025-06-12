@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
+    <div className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden group">
       {/* Product Image */}
       <div className="relative aspect-[3/4] overflow-hidden">
         <img
@@ -24,17 +24,17 @@ export default function ProductCard({ product }: ProductCardProps) {
         
         {/* Sale badge */}
         {product.isOnSale && (
-          <div className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 text-xs font-semibold rounded">
+          <div className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 text-xs font-semibold">
             -{product.discount}%
           </div>
         )}
         
         {/* Size tags */}
         <div className="absolute bottom-3 left-3 flex space-x-1">
-          <span className="bg-black text-white px-2 py-1 text-xs rounded">
+          <span className="bg-black text-white px-2 py-1 text-xs ">
             EU-36
           </span>
-          <span className="bg-blue-600 text-white px-2 py-1 text-xs rounded">
+          <span className="bg-blue-600 text-white px-2 py-1 text-xs ">
             ONLY 156
           </span>
         </div>
