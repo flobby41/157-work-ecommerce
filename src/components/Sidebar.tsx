@@ -1,4 +1,5 @@
 import React from 'react';
+import { Search, ShoppingCart, User, Menu } from 'lucide-react';
 import { categories } from '@/data/mockData';
 import { Category } from '@/types';
 
@@ -9,32 +10,93 @@ interface SidebarProps {
 
 export default function Sidebar({ onCategoryChange, activeCategory }: SidebarProps) {
   return (
-    <aside className="w-64 bg-gray-900 text-white min-h-screen p-4">
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold mb-4">HOODAR</h2>
-        <div className="flex items-center space-x-2 text-sm mb-4">
-          <span>FILTRERA & SORTERA</span>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-          </svg>
+    <aside className="w-64 bg-black text-white min-h-screen">
+      {/* Header section integrated into sidebar */}
+      <div className="p-4 border-b border-gray-700">
+        {/* Logo */}
+        <div className="text-2xl font-bold tracking-tight text-white mb-4">
+          157 WORK
+        </div>
+        
+        {/* Search bar */}
+        <div className="relative mb-4">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Sök..."
+            className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+          />
+        </div>
+        
+        {/* Header icons */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4 text-white">
+            <div className="flex items-center space-x-1">
+              <span className="text-sm">33</span>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="text-sm">5F</span>
+              <User className="w-4 h-4" />
+            </div>
+            <div className="flex items-center space-x-1">
+              <span className="text-sm">200</span>
+              <div className="relative">
+                <ShoppingCart className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
-      <nav className="space-y-1">
-        {categories.map((category) => (
-          <button
-            key={category.id}
-            onClick={() => onCategoryChange(category.id)}
-            className={`w-full text-left px-3 py-2 text-sm font-medium transition-colors ${
-              activeCategory === category.id
-                ? 'bg-white text-black rounded'
-                : 'text-gray-300 hover:text-white hover:bg-gray-800'
-            }`}
-          >
-            {category.name}
-          </button>
-        ))}
-      </nav>
+      {/* Navigation section */}
+      <div className="p-4">
+        <div className="mb-6">
+          <h2 className="text-lg font-semibold mb-4 text-white">HOODAR</h2>
+          <div className="mb-4">
+            <div className="text-sm text-gray-300 mb-2">HEM / KAMPANJER / ALLA HOODAR 100:-</div>
+            <div className="flex items-center space-x-2 text-sm text-white">
+              <span>FILTRERA & SORTERA</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        {/* Categories with dropdown arrows */}
+        <nav className="space-y-1">
+          <div className="flex items-center justify-between py-2 text-white">
+            <span className="text-sm font-medium">TJEJ</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white">
+            <span className="text-sm font-medium">KILLE</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white">
+            <span className="text-sm font-medium">HI-VIS</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          
+          <div className="flex items-center justify-between py-2 text-white">
+            <span className="text-sm font-medium">FÖRENING</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </nav>
+      </div>
       
       {/* Footer sections */}
       <div className="mt-12 space-y-8">
@@ -79,10 +141,6 @@ export default function Sidebar({ onCategoryChange, activeCategory }: SidebarPro
         <button className="bg-white text-black px-4 py-2 text-xs font-semibold rounded">
           BLI MEDLEM
         </button>
-      </div>
-      
-      <div className="mt-8 text-center">
-        <div className="text-2xl font-bold">157 WORK</div>
       </div>
     </aside>
   );
