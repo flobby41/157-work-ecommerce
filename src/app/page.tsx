@@ -40,8 +40,8 @@ export default function Home() {
           <main className="p-6 pt-0">
             {/* Product Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {/* First promotional offer - spans 2 rows */}
-              <div className="col-span-1 sm:col-span-1 lg:col-span-1 row-span-2">
+              {/* First promotional offer - spans 2/3 width */}
+              <div className="col-span-1 sm:col-span-2 lg:col-span-2 xl:col-span-3 row-span-2">
                 <PromoCard offer={promoOffers[0]} />
               </div>
               
@@ -55,8 +55,8 @@ export default function Home() {
                 <ProductCard key={product.id} product={product} />
               ))}
               
-              {/* Second promotional offer */}
-              <div className="col-span-1 sm:col-span-1 lg:col-span-1 row-span-2">
+              {/* Second promotional offer - spans 2/3 width */}
+              <div className="col-span-1 sm:col-span-2 lg:col-span-2 xl:col-span-3 row-span-2">
                 <PromoCard offer={promoOffers[1]} />
               </div>
               
