@@ -106,7 +106,7 @@ export const promoOffers: PromoOffer[] = [
     title: 'FUNKTIONSSHORTS',
     subtitle: 'SUPERDEAL',
     price: '200:-',
-    description: 'ODM PRIŞ: 249 Exkl. frakt och alla avg.',
+    description: '<strong>ORD.PRIŞ: 346:-</strong><br>(Gäller vid köp av minst 2 par)',
     image: '/img/tightShort.jpg',
     isLimitedEdition: true
   },
@@ -115,7 +115,7 @@ export const promoOffers: PromoOffer[] = [
     title: 'FUNKTIONSSHORTS',
     subtitle: 'SUPERDEAL',
     price: '200:-',
-    description: 'ORD.PRIŞ: 346:- (Gäller vid köp av minst 2 par)',
+    description: '<strong>ORD.PRIŞ: 346:-</strong><br>(Gäller vid köp av minst 2 par)',
     image: '/img/regnjacka.jpg',
     isLimitedEdition: true
   }

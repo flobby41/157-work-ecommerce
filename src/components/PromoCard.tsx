@@ -34,15 +34,16 @@ export default function PromoCard({ offer }: PromoCardProps) {
           
           {/* Bottom content */}
           <div className="text-white mb-20 ml-14">
-            <h3 className="text-base font-bold mb-1 tracking-wider">
+            <h3 className="text-base font-bold mb-1 tracking-widest">
               {offer.title}
             </h3>
-            <div className="text-6xl md:text-9xl font-bold mb-1">
+            <div className="text-7xl md:text-9xl font-bold mb-1">
               {offer.price}
             </div>
-            <p className="text-xs opacity-90">
-              {offer.description}
-            </p>
+            <p 
+              className="text-xs opacity-90"
+              dangerouslySetInnerHTML={{ __html: offer.description }}
+            />
           </div>
         </div>
       </div>
