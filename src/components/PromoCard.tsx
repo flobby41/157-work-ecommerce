@@ -22,10 +22,10 @@ export default function PromoCard({ offer }: PromoCardProps) {
           <div className="flex flex-col space-y-1">
             {offer.isLimitedEdition && (
               <>
-                <span className="bg-white text-black px-2 py-1 text-xs font-semibold w-fit">
+                <span className="bg-white text-black px-4 py-2 text-lg font-semibold w-fit">
                   SUPERDEAL
                 </span>
-                <span className="bg-black text-white px-2 py-1 text-xs font-semibold w-fit">
+                <span className="bg-black text-white px-4 py-2 text-lg font-semibold w-fit">
                   LIMITED EDITION
                 </span>
               </>
