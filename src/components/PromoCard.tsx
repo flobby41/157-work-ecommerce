@@ -17,7 +17,7 @@ export default function PromoCard({ offer }: PromoCardProps) {
         />
         
         {/* Overlay Content */}
-        <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-between p-4">
+        <div className="absolute inset-0 flex flex-col justify-between p-4">
           {/* Top badges */}
           <div className="flex flex-col space-y-1">
             {offer.isLimitedEdition && (
