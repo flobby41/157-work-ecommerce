@@ -15,7 +15,7 @@ export default function PromoCard({ offer }: PromoCardProps) {
           src={offer.image}
           alt={offer.title}
           fill
-          className="object-contain group-hover:scale-105 transition-transform duration-300"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         
         {/* Overlay Content */}

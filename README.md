@@ -1,105 +1,105 @@
 # 157 WORK - E-commerce Landing Page
 
-Une landing page e-commerce fidèle au design 157 WORK, développée avec Next.js, React, TypeScript et Tailwind CSS.
+An e-commerce landing page faithful to the 157 WORK design, developed with Next.js, React, TypeScript and Tailwind CSS.
 
-## 🚀 Fonctionnalités
+## 🚀 Features
 
-- **Design fidèle** : Reproduction exacte de l'interface 157 WORK
-- **Navigation sidebar** : Sidebar sombre avec catégories de produits
-- **Grille de produits** : Affichage responsive des produits avec effets hover
-- **Offres promotionnelles** : Cartes spéciales pour les deals et éditions limitées
-- **Interface moderne** : Design clean avec typographie et espacement soignés
-- **Responsive** : Adapté à tous les écrans (mobile, tablette, desktop)
+- **Faithful design**: Exact reproduction of the 157 WORK interface
+- **Navigation sidebar**: Dark sidebar with product categories
+- **Product grid**: Responsive product display with hover effects
+- **Promotional offers**: Special cards for deals and limited editions
+- **Modern interface**: Clean design with refined typography and spacing
+- **Responsive**: Adapted to all screens (mobile, tablet, desktop)
 
 ## 🛠️ Technologies
 
-- **Next.js 14+** avec App Router
-- **React 18** avec TypeScript
-- **Tailwind CSS** pour le styling
-- **Lucide React** pour les icônes
-- **ESLint** pour la qualité du code
+- **Next.js 14+** with App Router
+- **React 18** with TypeScript
+- **Tailwind CSS** for styling
+- **Lucide React** for icons
+- **ESLint** for code quality
 
 ## 📦 Installation
 
 ```bash
-# Installer les dépendances
+# Install dependencies
 npm install
 
-# Lancer le serveur de développement
+# Start development server
 npm run dev
 
-# Compiler pour la production
+# Build for production
 npm run build
 
-# Lancer en mode production
+# Start in production mode
 npm start
 ```
 
-## 🎨 Structure du Projet
+## 🎨 Project Structure
 
 ```
 src/
 ├── app/
-│   ├── globals.css      # Styles globaux
-│   ├── layout.tsx       # Layout principal
-│   └── page.tsx         # Page d'accueil
+│   ├── globals.css      # Global styles
+│   ├── layout.tsx       # Main layout
+│   └── page.tsx         # Home page
 ├── components/
-│   ├── Header.tsx       # Header avec navigation et recherche
-│   ├── Sidebar.tsx      # Sidebar avec catégories
-│   ├── ProductCard.tsx  # Carte produit individuelle
-│   └── PromoCard.tsx    # Carte offre promotionnelle
+│   ├── Header.tsx       # Header with navigation and search
+│   ├── Sidebar.tsx      # Sidebar with categories
+│   ├── ProductCard.tsx  # Individual product card
+│   └── PromoCard.tsx    # Promotional offer card
 ├── data/
-│   └── mockData.ts      # Données mockées
+│   └── mockData.ts      # Mock data
 └── types/
-    └── index.ts         # Types TypeScript
+    └── index.ts         # TypeScript types
 ```
 
-## 🎯 Composants Principaux
+## 🎯 Main Components
 
 ### Header
-- Logo 157 WORK
-- Barre de recherche
-- Icônes utilisateur et panier
-- Barre de livraison gratuite
-- Breadcrumb de navigation
+- 157 WORK logo
+- Search bar
+- User and cart icons
+- Free shipping bar
+- Navigation breadcrumb
 
 ### Sidebar
-- Navigation par catégories
-- Filtres et tri
-- Informations entreprise
-- Newsletter et réseaux sociaux
+- Category navigation
+- Filters and sorting
+- Company information
+- Newsletter and social networks
 
 ### ProductCard
-- Image produit avec hover
-- Badges de réduction
-- Sélection de couleurs
-- Système de notation
-- Prix avec réductions
+- Product image with hover
+- Discount badges
+- Color selection
+- Rating system
+- Prices with discounts
 
 ### PromoCard
-- Images avec overlay
-- Badges "SUPERDEAL" et "LIMITED EDITION"
-- Prix en grand format
-- Descriptions détaillées
+- Images with overlay
+- "SUPERDEAL" and "LIMITED EDITION" badges
+- Large format prices
+- Detailed descriptions
 
-## 🚀 Lancement
+## 🚀 Getting Started
 
-1. Clonez le projet
-2. Installez les dépendances : `npm install`
-3. Démarrez le serveur : `npm run dev`
-4. Ouvrez [http://localhost:3000](http://localhost:3000)
+1. Clone the project
+2. Install dependencies: `npm install`
+3. Start the server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-La landing page reproduit fidèlement le design de l'image fournie avec tous les éléments visuels et fonctionnels.
+The landing page faithfully reproduces the design from the provided image with all visual and functional elements.
 
 ## 📱 Responsive Design
 
-- **Mobile** : Navigation adaptée, grille 1 colonne
-- **Tablette** : Grille 2-3 colonnes
-- **Desktop** : Grille complète 4+ colonnes avec sidebar
+- **Mobile**: Adapted navigation, 1-column grid
+- **Tablet**: 2-3 column grid
+- **Desktop**: Full 4+ column grid with sidebar
 
-## 🎨 Personnalisation
+## 🎨 Customization
 
-Les couleurs, styles et données peuvent être facilement modifiés dans :
-- `tailwind.config.js` pour les couleurs
-- `src/data/mockData.ts` pour les produits
-- `src/components/` pour les composants
+Colors, styles and data can be easily modified in:
+- `tailwind.config.js` for colors
+- `src/data/mockData.ts` for products
+- `src/components/` for components
