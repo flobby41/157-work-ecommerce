@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Search, ShoppingCart, User } from 'lucide-react';
+import { Search, ShoppingCart, User, ChevronDown } from 'lucide-react';
+import { Category } from '@/types';
 
 interface SidebarProps {
-  onCategoryChange?: (categoryId: string) => void;
-  activeCategory?: string;
+  categories: Category[];
+  onCategoryChange: (categoryId: string) => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function Sidebar({ onCategoryChange: _onCategoryChange, activeCategory: _activeCategory }: SidebarProps) {
-  // Component with props for category filtering functionality
-  // Parameters prefixed with _ to indicate they are intentionally unused for now
+export default function Sidebar({ categories, onCategoryChange }: SidebarProps) {
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+
+  const handleCategoryClick = (categoryId: string) => {
+    setActiveCategory(categoryId);
+    onCategoryChange(categoryId);
+  };
+
   return (
     <aside className="w-70 bg-black text-white min-h-screen" style={{ fontFamily: 'UnB-Office-Regular, sans-serif' }}>
       {/* Header section integrated into sidebar */}
@@ -59,68 +64,60 @@ export default function Sidebar({ onCategoryChange: _onCategoryChange, activeCat
             className="w-full pl-12 pr-4 py-3 bg-[rgba(25,25,25,255)] border-0 text-white placeholder-white text-xs focus:outline-none focus:ring-0"
           />
         </div>
-        
-       
       </div>
       
       {/* Navigation section */}
       <div className="p-4">
-        {/* Categories with dropdown arrows */}
+        {/* Dynamic Categories from Enad API */}
         <nav className="space-y-1">
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">TJEJ</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => handleCategoryClick(category.id)}
+              className={`w-full flex items-center justify-between py-2 text-left border-b border-gray-900 hover:bg-gray-800 transition-colors ${
+                activeCategory === category.id ? 'bg-gray-800' : ''
+              }`}
+            >
+              <span className={`text-xs font-bold ${
+                activeCategory === category.id ? 'text-yellow-400' : 'text-white'
+              }`}>
+                {category.name}
+              </span>
+              <ChevronDown className="w-4 h-4 text-white" />
+            </button>
+          ))}
           
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">KILLE</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">HI-VIS</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">FÖRENING</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">PROFILERING</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">KAMPANJER</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">KUNDCASE</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          
-          <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
-            <span className="text-xs font-bold">PRESENTKORT</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+          {/* Static categories (keeping some of the original design) */}
+          <div className="mt-6 pt-4 border-t border-gray-700">
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">HI-VIS</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">FÖRENING</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">PROFILERING</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">KAMPANJER</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">KUNDCASE</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
+            
+            <div className="flex items-center justify-between py-2 text-white border-b border-gray-900">
+              <span className="text-xs font-bold">PRESENTKORT</span>
+              <ChevronDown className="w-4 h-4" />
+            </div>
           </div>
         </nav>
       </div>
