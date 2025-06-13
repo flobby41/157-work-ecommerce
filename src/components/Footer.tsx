@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
@@ -65,9 +66,14 @@ export default function Footer() {
 
             {/* Large Logo */}
             <div className="text-right">
-              <h1 className="text-7xl lg:text-9xl font-bold tracking-wider">
-                157 WORK
-              </h1>
+              <Image
+                src="/img/157.png"
+                alt="157 WORK"
+                width={400}
+                height={120}
+                className="w-auto h-24 lg:h-32 -ml-8 lg:-ml-8"
+                priority
+              />
             </div>
           </div>
         </div>
