@@ -53,8 +53,8 @@ export const useEnadProducts = (options: UseEnadProductsOptions = {}): UseEnadPr
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [totalPages, setTotalPages] = useState(1);
 
-  // Fallback to mock data
-  const useMockData = useCallback((category?: string) => {
+  // Fallback to mock data - regular function, not a hook
+  const fallbackToMockData = useCallback((category?: string) => {
     console.warn('Falling back to mock data');
     setUsingMockData(true);
     
@@ -83,7 +83,7 @@ export const useEnadProducts = (options: UseEnadProductsOptions = {}): UseEnadPr
       
       if (result.products.length === 0 && page === 1) {
         // If no products found on first page, use mock data
-        useMockData(category);
+        fallbackToMockData(category);
       } else {
         setProducts(result.products);
         setCurrentPage(result.currentPage);
@@ -97,11 +97,11 @@ export const useEnadProducts = (options: UseEnadProductsOptions = {}): UseEnadPr
     } catch (err) {
       console.error('Error fetching products, using mock data:', err);
       setError(err instanceof Error ? err.message : 'Failed to fetch products');
-      useMockData(category);
+      fallbackToMockData(category);
     } finally {
       setLoading(false);
     }
-  }, [currentPage, perPage, useMockData]);
+  }, [currentPage, perPage, fallbackToMockData]);
 
   // Fetch categories
   const fetchCategories = useCallback(async () => {
@@ -162,12 +162,10 @@ export const useEnadProducts = (options: UseEnadProductsOptions = {}): UseEnadPr
   // Initial data fetch
   useEffect(() => {
     // Fetch initial data
-    Promise.all([
-      fetchProducts(currentCategory, initialPage),
-      fetchCategories(),
-      fetchFilters()
-    ]);
-  }, []); // Empty dependency array for initial load only
+    fetchProducts(initialCategory, initialPage);
+    fetchCategories();
+    fetchFilters();
+  }, [fetchProducts, fetchCategories, fetchFilters, initialCategory, initialPage]);
 
   return {
     products,

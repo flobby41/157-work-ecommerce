@@ -95,7 +95,7 @@ export interface EnadAttribute {
   key: string;
   name: string;
   description: string;
-  values: any;
+  values: Record<string, unknown>;
 }
 
 export interface EnadInventory {
